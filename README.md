@@ -4,9 +4,9 @@ You are tasked with developing a user management system using the Laravel framew
 
 
 
-# Install Laravel 10
+<!-- # Install Laravel 10
 
-    composer create-project laravel/laravel:10.0^ assignment
+    composer create-project laravel/laravel:10.0^ assignment -->
 
 # Migrate database command database
 
