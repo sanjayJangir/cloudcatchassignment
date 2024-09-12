@@ -3,6 +3,11 @@ You are tasked with developing a user management system using the Laravel framew
 
 ## Requirements:
 
+# Install Laravel 10 
+
+    composer create-project laravel/laravel:10.0^ assignment
+
+
 # 1. User Registration Form:
 
     Create a user registration form with the following basic details:
