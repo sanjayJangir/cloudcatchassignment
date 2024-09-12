@@ -48,4 +48,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function country()
+    {
+        return $this->hasOne(Country::class, 'id', 'country_id');
+    }
+
+    public function state()
+    {
+        return $this->hasOne(State::class, 'id', 'state_id');
+    }
+
+    public function city()
+    {
+        return $this->hasOne(City::class, 'id', 'city_id');
+    }
 }
