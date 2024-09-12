@@ -1,14 +1,22 @@
 ## About Assignment
+
 You are tasked with developing a user management system using the Laravel framework (version 10) that includes user registration, login functionality, and a dashboard to display registered user information. Additionally, you need to implement secure password storage using MD5 encryption and utilize Laravel Eloquent ORM for database operations
 
-## Requirements:
+## Requirements
 
-# Install Laravel 10 
+# Install Laravel 10
 
     composer create-project laravel/laravel:10.0^ assignment
 
+# Migrate database command database
 
-# 1. User Registration Form:
+    php artisan migrate
+
+# Command to run seeder Country, State, City database
+
+    php artisan db:seed
+
+# 1. User Registration Form
 
     Create a user registration form with the following basic details:
     Full Name
@@ -19,13 +27,13 @@ You are tasked with developing a user management system using the Laravel framew
     Gender
     Country, State, City (Implement dependable dropdowns for city, state, and country selection) - values should come from the database
 
-# 2. Login Form:
+# 2. Login Form
 
     Develop a login form with the following fields:
     Email Address
     Password
 
-# 3. Dashboard:
+# 3. Dashboard
 
     Upon successful login, create a dashboard that displays the registered user's information:
     Full Name
@@ -36,20 +44,20 @@ You are tasked with developing a user management system using the Laravel framew
     State
     City
 
-# 4. Logout Option:
+# 4. Logout Option
 
     Implement a logout option that securely logs the user out of the system.
 
-# 5. Email Notification:
+# 5. Email Notification
 
     After successful user registration, send an email to the registered user with their username and password.
 
-# 6. Database Integration:
+# 6. Database Integration
 
     Utilize MySQL database for storing user information.
     Implement Laravel Eloquent ORM for interacting with the database.
 
-# 7. Technical Considerations:
+# 7. Technical Considerations
 
     Ensure that passwords are stored using MD5 encryption.
     Use Laravel's built-in validation features to validate form inputs.
