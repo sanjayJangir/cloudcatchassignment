@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,5 +36,13 @@ Route::post('state-city', [HomeController::class, 'statebycity'])->name('stateby
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('home', [HomeController::class, 'index'])->name('home');
+});
+
+
+Route::get('/testroute', function () {
+    $name = "Funny Coder";
+    
+    // The email sending is done using the to method on the Mail facade
+    Mail::to('testreceiver@gmail.com')->send(new WelcomeMail($name));
 });
